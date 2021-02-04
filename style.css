@@ -1,0 +1,405 @@
+* {
+  /* C'est pour donner les dimension de toute la page web*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pour avoir les bords définit entre le margin et padding*/
+  outline: none; /* pour pas qu'il y ait de bordure si il y a padding et marging*/
+  list-style: none; /* Pour toutes les listes ul ol, pas de style*/
+  text-decoration: none; /* 0 soulignement*/
+  scroll-behavior: smooth;
+  font-family: "Satisfy", cursive;
+  font-size: 20px;
+}
+body {
+  color: #201600;
+}
+h1 {
+  color: white;
+  letter-spacing: 10px;
+}
+
+/* nav */
+h1:hover {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    rgb(138, 4, 233),
+    rgb(78, 78, 255),
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex; /*Pour mettre les espaces entre les éléments avec space around*/
+  justify-content: space-around; /*Laisse plusieurs option, définit la manière dont les éléments dans la div sont 
+    positionnés, ici les afficher en ligne avec un léger espace*/
+  align-items: center; /*Les mettre au milieu des cases*/
+  position: fixed; /*Quand tu descends il descend avec toi*/
+  background-color: #201600;
+  z-index: 100;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav ul li a {
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+}
+header nav ul li {
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: #201600;
+  text-align: center;
+}
+header nav ul li ul li {
+  display: none;
+}
+header nav ul li:hover ul li {
+  display: block;
+}
+.ion-navicon-round {
+  color: white;
+  font-size: 170%;
+  background-color: #201600;
+}
+.ion-navicon-round:hover {
+  background-image: linear-gradient(to bottom, red, yellow, blue);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline #f25b30 2px;
+  transform: scale(1.2);
+  transition: all 0.6s;
+}
+
+
+h2 {
+  text-align: center;
+  padding: 6%;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 10px;
+  background-image: url("/img/dessin.svg");
+}
+/* Presentation */
+
+#bjr {
+  text-align: right;
+  margin-left: 10%;
+  width: 50%;
+  margin-top: 20%;
+  text-decoration: underline overline #f25a3069;
+  padding-bottom: 3%;
+}
+
+#sectionpropos {
+  height: 100.4vh;
+  border-bottom: 3px solid #201600; /*#3b3646*/
+  width: 100%;
+}
+
+.txtpropos {
+  position: absolute;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8%;
+  margin-left: 55%;
+  padding: 0 0 0 10%;
+  width: 40%;
+  background-image: url(/img/dessinparapluie1.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: top;
+}
+.txtpropos:hover {
+  background-color: #463f3f; /*rgb(99,94,108)*/
+  color: white;
+  border-radius: 50px;
+  transition: all 2s;
+}
+
+.paragraphepropos {
+  width: 90%;
+  text-align: justify;
+  margin-top: 10%;
+  margin-left: -10%;
+  padding: 0 0 0 0;
+}
+.avatar {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  background-image: url("/img/download20210202154433.png");
+  background-position: center;
+  background-size: 100%;
+  margin-top: 25%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txtpropos h2 {
+  margin-left: -30%;
+  margin-top: 10%;
+}
+.soleil {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/*##############################################ANIMATION##############################*/
+
+.rounds {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: -25% 0 0 -14%;
+}
+
+.firstround {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #f25b30;
+  opacity: 50%;
+  animation: anim1 4.5s infinite;
+  position: absolute;
+}
+
+.secround {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f25b30;
+  opacity: 60%;
+  animation: anim2 4s infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    left: 20px;
+    top: 140px;
+  }
+  50% {
+    left: 20px;
+    top: 100px;
+  }
+  100% {
+    left: 20px;
+    top: 140px;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    left: 250px;
+    top: 140px;
+  }
+  50% {
+    left: 40px;
+    top: 140px;
+  }
+  100% {
+    left: 250px;
+    top: 140px;
+  }
+} /*###############################################ANIMATION############################*/
+
+
+/* competences */
+.competences {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+.logos {
+  display: flex;
+  flex-flow: wrap;
+  width: 22.5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos img {
+  width: 100px;
+  height: 100px;
+  padding: 2%;
+}
+
+.logos img:hover {
+  opacity: 50%;
+  transform: scale(1.1) rotate(-3deg);
+  transition: all 0.7s;
+}
+
+.softskills {
+  display: flex;
+  flex-flow: wrap;
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+}
+.softskills img {
+  width: 50%;
+  padding: 8%;
+}
+
+.softskills img:hover {
+  opacity: 50%;
+  transform: scale(1.1) rotate(3deg);
+  transition: all 0.7s;
+}
+
+/* Realisation */
+.realisations {
+  display: flex;
+  flex-flow: wrap;
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+}
+
+.realisations img {
+  width: 100%;
+  padding: 2%;
+}
+.site,
+.scratch,
+.blender,
+.inskapeDiv {
+  width: 50%;
+}
+
+.realisations img:hover {
+  transform: scale(1.1);
+  opacity: 50%; /* brightness(40%);*/
+  transition: all 0.7s;
+}
+
+#realisations {
+  padding-top: 4%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+/* Hobbies */
+
+.hobbies {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  background-image: url(/img/feuillescolor.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: left;
+}
+
+.conteneurHobbies {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  width: 30%;
+}
+.danse,
+.peinture,
+.sport,
+.lecture,
+.photographie {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  justify-content: space-evenly;
+  margin: 2%;
+  padding: 10%;
+  text-align: center;
+  background-color: rgb(242, 91, 48, 0.9);
+  align-items: center;
+}
+
+/* Carousel */
+
+.carousel {
+  box-shadow: 4px 4px 2px rgba(32, 22, 0, 0.8);
+  overflow: hidden;
+  height: 500px;
+  width: 473px;
+}
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+/* footer */
+
+footer {
+  padding-top: 4%;
+  display: flex;
+  flex-flow: column;
+}
+
+ul li img {
+  width: 3%;
+  margin-left: 40%;
+}
+
+
+/* Media queries */
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+  .soleil{
+    height: 85%;
+  }
+  p{
+    font-size: 75%;
+  }
+  .avatar{
+    margin-top: 300px;
+  }
+  .logos img{
+    width: 50%;
+    height: 20%;
+  }
+  #realisations a{
+  font-size: 90%;
+}
+ 
+  .hobbies{
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteneurHobbies{
+    width: 70%;
+  }
+  #hobbies{
+    
+
+}
