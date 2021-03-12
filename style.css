@@ -123,7 +123,7 @@ h2 {
   margin-left: 55%;
   padding: 0 0 0 10%;
   width: 40%;
-  background-image: url(/img/dessinparapluie1.svg);
+  background-image: url(img/dessinparapluie1.svg);
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: top;
@@ -147,7 +147,7 @@ h2 {
   height: 120px;
   width: 120px;
   border-radius: 100%;
-  background-image: url("/img/download20210202154433.png");
+  background-image: url("img/download20210202154433.png");
   background-position: center;
   background-size: 100%;
   margin-top: 25%;
@@ -317,7 +317,7 @@ h2 {
   display: flex;
   flex-flow: wrap;
   justify-content: space-evenly;
-  background-image: url(/img/feuillescolor.svg);
+  background-image: url(img/feuillescolor.svg);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: left;
