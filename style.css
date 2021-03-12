@@ -31,7 +31,6 @@ h1:hover {
     red
   );
   -webkit-background-clip: text;
-  -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -92,23 +91,21 @@ header nav ul li a:hover {
   transition: all 0.6s;
 }
 
-
 h2 {
   text-align: center;
   padding: 6%;
   font-family: "Raleway", sans-serif;
   letter-spacing: 10px;
-  background-image: url("img/dessin.svg");
 }
 /* Presentation */
 
 #bjr {
-  text-align: right;
   margin-left: 10%;
   width: 50%;
   margin-top: 20%;
   text-decoration: underline overline #f25a3069;
   padding-bottom: 3%;
+  font-family: "Satisfy", cursive;
 }
 
 #sectionpropos {
@@ -126,7 +123,7 @@ h2 {
   margin-left: 55%;
   padding: 0 0 0 10%;
   width: 40%;
-  background-image: url(img/dessinparapluie1.svg);
+  background-image: url(/img/dessinparapluie1.svg);
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: top;
@@ -150,7 +147,7 @@ h2 {
   height: 120px;
   width: 120px;
   border-radius: 100%;
-  background-image: url("img/download20210202154433.png");
+  background-image: url("/img/download20210202154433.png");
   background-position: center;
   background-size: 100%;
   margin-top: 25%;
@@ -230,14 +227,18 @@ h2 {
   }
 } /*###############################################ANIMATION############################*/
 
-
 /* competences */
 .competences {
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column;
   justify-content: space-evenly;
 }
-.logos {
+.contener {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.skills {
   display: flex;
   flex-flow: wrap;
   width: 22.5%;
@@ -245,13 +246,13 @@ h2 {
   justify-content: center;
 }
 
-.logos img {
+.skills img {
   width: 100px;
   height: 100px;
   padding: 2%;
 }
 
-.logos img:hover {
+.skills img:hover {
   opacity: 50%;
   transform: scale(1.1) rotate(-3deg);
   transition: all 0.7s;
@@ -276,29 +277,31 @@ h2 {
 }
 
 /* Realisation */
-.realisations {
+#projects {
   display: flex;
-  flex-flow: wrap;
-  width: 50%;
+  align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-flow: column;
+  padding-bottom: 70px;
+}
+#projects img {
+  width: 400px;
+  margin: 10px;
+  filter: brightness(80%);
+  border-radius: 50px;
+}
+.project-title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 75%;
 }
 
-.realisations img {
-  width: 100%;
-  padding: 2%;
-}
-.site,
-.scratch,
-.blender,
-.inskapeDiv {
-  width: 50%;
-}
-
-.realisations img:hover {
+#projects img:hover {
   transform: scale(1.1);
-  opacity: 50%; /* brightness(40%);*/
+  filter: brightness(110%); /* brightness(40%);*/
   transition: all 0.7s;
+  box-shadow: 15px 15px 20px 0px #20160093;
 }
 
 #realisations {
@@ -314,7 +317,7 @@ h2 {
   display: flex;
   flex-flow: wrap;
   justify-content: space-evenly;
-  background-image: url(img/feuillescolor.svg);
+  background-image: url(/img/feuillescolor.svg);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: left;
@@ -370,36 +373,32 @@ ul li img {
   margin-left: 40%;
 }
 
-
 /* Media queries */
 
-@media only screen and (min-width: 480px) and (max-width: 768px){
-  .soleil{
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .soleil {
     height: 85%;
   }
-  p{
+  p {
     font-size: 75%;
   }
-  .avatar{
+  .avatar {
     margin-top: 300px;
   }
-  .logos img{
+  .logos img {
     width: 50%;
     height: 20%;
   }
-  #realisations a{
-  font-size: 90%;
-}
- 
-  .hobbies{
+  #realisations a {
+    font-size: 90%;
+  }
+
+  .hobbies {
     flex-flow: column;
     justify-content: center;
     align-items: center;
   }
-  .conteneurHobbies{
+  .conteneurHobbies {
     width: 70%;
   }
-  #hobbies{
-    
-
 }
